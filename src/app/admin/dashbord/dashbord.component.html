@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-body">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="btn btn-outline-primary">
+        <a class="navbar-brand" [routerLink]="'/admin/dashbord/ingenierie'" routerLinkActive="active"> Ingenierie </a>
+      </button>
+      <button class="btn btn-outline-primary">
+        <a class="navbar-brand" [routerLink]="'/admin/dashbord/masterpro'" routerLinkActive="active"> Master pro
+        </a>
+      </button>
+
+     <button class="btn btn-outline-primary">
+       <a class="navbar-brand" [routerLink]="'/admin/dashbord/mastersearch'" routerLinkActive="active"> Master Recherche </a>
+     </button>
+      <button class="btn btn-outline-primary">
+        <a class="navbar-brand" [routerLink]="'/admin/dashbord/doctorat'" routerLinkActive="active"> Doctorat </a>
+      </button>
+    </nav>
+    <p class="card-text">
+      <router-outlet></router-outlet>
+    </p>
+  </div>
+</div>

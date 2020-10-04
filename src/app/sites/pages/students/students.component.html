@@ -1,0 +1,155 @@
+<div class="container">
+  <div class="col-md-6">
+
+    <!-- <div class="percent" *ngIf="percentage; else addMemoryform">
+
+      <div class="Ids-ripple"><div></div><div></div></div>
+        <div class="card">
+          <p>Processing Request:</p>
+        </div>
+
+        <p class="progress">{{percentage}}%</p>
+      </div> -->
+
+
+    <!-- <ng-template #addMemoryform> -->
+
+    <form (ngSubmit)="zidme(memoireForm.value)" [formGroup]="memoireForm">
+      <div class="form-group">
+        <label for="matricule">Matricule</label>
+        <input type="text" class="form-control" formControlName="matricule">
+      </div>
+      <div class="form-group">
+        <label for="Nom">Nom</label>
+        <input type="text" class="form-control" formControlName="nom">
+      </div>
+      <div class="form-group">
+        <label for="Prenom">Prenom</label>
+        <input type="text" class="form-control" formControlName="prenom">
+      </div>
+      <div class="form-group">
+        <label for="theme">Theme</label>
+        <input type="text" class="form-control" formControlName="theme">
+      </div>
+      <div class="form-group">
+        <label for="entreprise">Entreprise</label>
+        <input type="text" class="form-control" formControlName="entreprise">
+      </div>
+      <div class="form-group">
+        <label for="encadreur">Encadreur</label>
+        <input type="text" class="form-control" formControlName="encadreur">
+      </div>
+      <div class="form-group">
+        <label for="annee">Annee</label>
+        <input type="text" class="form-control" formControlName="annee">
+      </div>
+       <div class="form-group">
+        <label for="cycle">Cycle</label>
+        <select #t (change)="loadParcours(t.value)" class="form-control" formControlName="cycle">
+          <option value=""></option>
+          <option *ngFor="let item of cycles" value="{{item.id}}">{{item.name}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="parcours">Parcours</label>
+        <select id="parcours" class="form-control" formControlName="parcours">
+          <option value=""></option>
+          <option *ngFor="let item of parcours" value="{{item.id}}">{{item.name}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="url">Choisir le pdf</label>
+        <input id="url" type="file" class="form-control" (change)="handleInput($event)" accept=".pdf"
+          formControlName="url">
+      </div>
+
+      <!-- <input type="submit" [disabled]="!memoireForm.valid" value="Submit"> -->
+      <!-- <input type="submit" value="Submit" > -->
+      <!-- <button class="btn btn-primary" (click)=onSubmit()>Save</button> -->
+
+      <input type="submit" value="Save" [disabled]="!memoireForm.valid">
+
+
+    </form>
+    <!-- </ng-template> -->
+
+    <!-- <div class="card">
+      <div class="card-content">
+        <span class="card-title">Ajout Memoire soutenu</span>
+        <form (ngSubmit)="onSubmit()" class="col s6">
+
+          <div class="form-group">
+            <div class="row">
+              <input type="text" placeholder="NOM" [(ngModel)]="item.nom" name="nom">
+              <label>Nom</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <input type="text" placeholder="PRENOM" [(ngModel)]="item.prenom" name="prenom">
+              <label>PreNom</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <input type="text" placeholder="matricule" [(ngModel)]="item.matricule" name="matricule">
+              <label>matricule</label>
+            </div>
+          </div>
+
+
+           <div class="form-group">
+            <label>Cycle</label>
+            <select #t (change)="loadParcours(t.value)" class="form-control" name="cycle" >
+              <option value=""></option>
+              <option *ngFor="let cycle of cycles" value="{{cycle.id}}"  [(ngModel)]="item.parcours" name="cycle">{{item.cycle}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="parcours">Parcours</label>
+            <select id="parcours" class="form-control" name="parcours">
+              <option value=""></option>
+              <option *ngFor="let par of parcours" value="{{par.id}}" [(ngModel)]="item.parcours" name="parcours">{{par.name}}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <input type="text" placeholder="entreprise" [(ngModel)]="item.entreprise" name="entreprise">
+              <label>Entreprise</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <input type="text" placeholder="encadreur" [(ngModel)]="item.encadreur" name="encadreur">
+              <label>Encadreur</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <input type="text" placeholder="theme" [(ngModel)]="item.theme" name="theme">
+              <label>theme</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <input type="text" placeholder="annee" [(ngModel)]="item.annee" name="annee">
+              <label>Annnee</label>
+            </div>
+          </div>
+          <input type="submit" value="Submit" class="btn">
+        </form>
+      </div>
+    </div> -->
+
+
+
+
+
+  </div>
+</div>

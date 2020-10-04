@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="col-md-6">
+
+    <form (ngSubmit)="zidme(memoireForm.value)" [formGroup]="memoireForm">
+      <div class="form-group">
+        <label for="matricule">Matricule</label>
+        <input type="text" class="form-control" formControlName="matricule">
+      </div>
+      <div class="form-group">
+        <label for="Nom">Nom</label>
+        <input type="text" class="form-control" formControlName="nom">
+      </div>
+      <div class="form-group">
+        <label for="Prenom">Prenom</label>
+        <input type="text" class="form-control" formControlName="prenom">
+      </div>
+      <div class="form-group">
+        <label for="theme">Theme</label>
+        <input type="text" class="form-control" formControlName="theme">
+      </div>
+      <div class="form-group">
+        <label for="entreprise">Entreprise</label>
+        <input type="text" class="form-control" formControlName="entreprise">
+      </div>
+      <div class="form-group">
+        <label for="encadreur">Encadreur</label>
+        <input type="text" class="form-control" formControlName="encadreur">
+      </div>
+      <div class="form-group">
+        <label for="annee">Annee</label>
+        <input type="text" class="form-control" formControlName="annee">
+      </div>
+       <div class="form-group">
+        <label for="cycle">Cycle</label>
+        <select class="form-control" formControlName="cycle">
+          <!-- <option value=""></option> -->
+          <option value="INGENIERIE" selected="selected">INGENIERIE</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="parcours">Parcours</label>
+        <select id="parcours" class="form-control" formControlName="parcours">
+          <option value="IAA">IAA</option>
+          <option value="MIP">MIP</option>
+          <option value="CIGE">CIGE</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="url">Choisir le pdf</label>
+        <input id="url" type="file" class="form-control" (change)="handleInput($event)" accept=".pdf"
+          formControlName="url">
+      </div>
+
+      <input type="submit" value="Save" [disabled]="!memoireForm.valid">
+
+
+    </form>
+
+
+
+
+
+  </div>
+</div>

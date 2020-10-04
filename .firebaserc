@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "biblionet-29bad": {
+      "hosting": {
+        "biblionet2": [
+          "biblionet-29bad"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "biblionet-29bad"
+  }
+}

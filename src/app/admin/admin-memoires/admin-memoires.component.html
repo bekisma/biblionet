@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="row">
+    <button class="btn btn-primary">Ajouter un nouveau memoire</button>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive-md">
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th>Nom</th>
+              <th>Prenom</th>
+              <th>Matricule</th>
+              <th>Cycle</th>
+              <th>Mention</th>
+              <th>Parcours</th>
+              <th>Annee</th>
+              <th>Theme</th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th>Entreprise</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of memoiresS | async">
+              <td>{{ item.payload.doc.data().nom }}</td>
+              <th>{{ item.payload.doc.data().prenom }}</th>
+              <td>{{ item.payload.doc.data().matricule }}</td>
+              <td>{{ item.payload.doc.data().cycle }}</td>
+              <td>{{ item.payload.doc.data().mention }}</td>
+              <td>{{ item.payload.doc.data().parcours }}</td>
+              <td>{{ item.payload.doc.data().annee }}</td>
+              <td colspan="5">{{ item.payload.doc.data().theme }}</td>
+              <td>{{ item.payload.doc.data().entreprise }}</td>
+              <td><a [routerLink]=""><button class="btn btn-primary">Editer</button></a></td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

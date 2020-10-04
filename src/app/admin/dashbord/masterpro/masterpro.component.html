@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-body">
+    <h2 class="card-title">Master PRO</h2>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'cgq'" routerLinkActive="active"> CGQ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'main-geft'" routerLinkActive="active"> MAIN-GEFT </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'na'" routerLinkActive="active"> NA </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'sime'" routerLinkActive="active"> SIME </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'newmemoire'" routerLinkActive="active"><button class="btn btn-dark">Ajouter un nouveau memoire </button></a>
+      </li>
+    </ul>
+
+    <p class="card-text">
+      <router-outlet></router-outlet>
+    </p>
+  </div>
+</div>

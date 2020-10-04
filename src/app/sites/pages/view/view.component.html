@@ -1,0 +1,430 @@
+<div class="container">
+  <div class="col-md-12">
+
+    <div class="row">
+      <div class="col-md-12  d-flex justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Industrie Agricole et Alimentaire (IAA)</h3>
+              <p class="card-category">Faites vos recherches ici</p>
+            </div>
+
+            <div class="card-body center">
+              <form>
+                <div class="input-group no-border">
+                  <div class="col-xs-2">
+                    <input #query (keyup)="filter(query.value)" type="text" value="" class="form-control"
+                      placeholder="Recherches...">
+                  </div>
+                  <div class="input-group-append">
+                    <div class="input-group-text">
+                      <i class="nc-icon nc-zoom-split"></i>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="card-footer ">
+              <!-- <div class="legend">
+                <i class="fa fa-circle text-primary"></i> Opened
+                <i class="fa fa-circle text-warning"></i> Read
+                <i class="fa fa-circle text-danger"></i> Deleted
+                <i class="fa fa-circle text-gray"></i> Unopened
+              </div> -->
+              <hr>
+              <div class="stats">
+                <i class="fa fa-calendar"></i> Number of emails sent
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- <div class="row">
+        <div class="col-12 col-md-8">
+            <div class="card-col">
+                <ng-container *ngFor="let m of memoires; let i=index">
+                    <div class="col">
+                        <div class="card" style="width: 20rem;">
+                            <img class="card-img-top" [src]="m.image"  class="card-img-top" alt="images non" />
+                            <div class="card-body">
+                                <h4 class="card-title">{{m.nom}}</h4>
+                                <p class="card-text"> {{m.theme}}</p>
+                                <a href="#" class="btn btn-primary">Ouvrir</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="( i + 1) % 2 === 0" class="w-100"></div>
+                </ng-container>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- nb card -->
+    <!-- <div class="card-row">
+        <div class="card-col">
+          <nb-card size="tiny">
+            <nb-card-header>Tiny card</nb-card-header>
+          </nb-card>
+          <nb-card size="tiny">
+            <nb-card-header>Tiny card</nb-card-header>
+          </nb-card>
+        </div>
+        <div class="card-col">
+          <nb-card size="medium">
+            <nb-card-header>Medium card</nb-card-header>
+
+            <ng-container *ngFor="let m of memoires; let i=index">
+                <div class="col">
+                    <div class="card" style="width: 10rem;">
+                        <img class="card-img-top " [src]="m.image"  class="card-img-top" alt="images non" />
+                        <div class="card-body">
+                            <h4 class="card-title">{{m.nom}}</h4>
+                            <p class="card-text"> {{m.theme}}</p>
+                            <a href="#" class="btn btn-primary">Ouvrir</a>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="( i + 1) % 2 === 0" class="w-100"></div>
+            </ng-container>
+
+          </nb-card>
+        </div>
+    </div>
+
+      <div class="card-row">
+        <div class="card-col">
+          <nb-card size="tiny">
+            <nb-card-header>Tiny card</nb-card-header>
+          </nb-card>
+          <nb-card size="small">
+            <nb-card-header>Small card</nb-card-header>
+          </nb-card>
+        </div>
+        <div class="card-col">
+          <nb-card size="large">
+            <nb-card-header>Large card</nb-card-header>
+          </nb-card>
+        </div>
+      </div>
+      -->
+    <div class="row d-flex justify-content-center">
+      <!-- <ng-container *ngFor="let m of filteredProducts; let i=index">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="card card-stats" >
+                    <div class="card-body ">
+                        <div class="row">
+                            <img class="card-img-top fit-image" [src]="m.image" alt="images non" />
+                        <div class="col-5 col-md-4">
+                            <div class="icon-big text-center icon-warning">
+                            <i class="nc-icon nc-globe text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="col-7 col-md-8">
+                            <div class="numbers">
+                            <p class="card-category">{{m.nom}}</p>
+                            <p class="card-title">{{m.theme}}<p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer ">
+                    <hr>
+                    <div class="stats">
+                    <i class="fa fa-refresh"></i>{{m.nom}}
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div *ngIf="( i + 1) % 2 === 0" class="w-100"></div>
+        </ng-container>       -->
+      <!-- <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-5 col-md-4">
+                <div class="icon-big text-center icon-warning">
+                  <i class="nc-icon nc-money-coins text-success"></i>
+                </div>
+              </div>
+              <div class="col-7 col-md-8">
+                <div class="numbers">
+                  <p class="card-category">Revenue</p>
+                  <p class="card-title">$ 1,345
+                    <p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer ">
+            <hr>
+            <div class="stats">
+              <i class="fa fa-calendar-o"></i> Last day
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-5 col-md-4">
+                <div class="icon-big text-center icon-warning">
+                  <i class="nc-icon nc-vector text-danger"></i>
+                </div>
+              </div>
+              <div class="col-7 col-md-8">
+                <div class="numbers">
+                  <p class="card-category">Errors</p>
+                  <p class="card-title">23
+                    <p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer ">
+            <hr>
+            <div class="stats">
+              <i class="fa fa-clock-o"></i> In the last hour
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-5 col-md-4">
+                <div class="icon-big text-center icon-warning">
+                  <i class="nc-icon nc-favourite-28 text-primary"></i>
+                </div>
+              </div>
+              <div class="col-7 col-md-8">
+                <div class="numbers">
+                  <p class="card-category">Followers</p>
+                  <p class="card-title">+45K
+                    <p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer ">
+            <hr>
+            <div class="stats">
+              <i class="fa fa-refresh"></i> Update now
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-5 col-md-4">
+                <div class="icon-big text-center icon-warning">
+                  <i class="nc-icon nc-globe text-warning"></i>
+                </div>
+              </div>
+              <div class="col-7 col-md-8">
+                <div class="numbers">
+                  <p class="card-category">IAA
+                </p>
+                  <p class="card-title">IAA
+                    <p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer ">
+            <hr>
+            <div class="stats">
+              <i class="fa fa-refresh"></i> Update Now
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-5 col-md-4">
+                <div class="icon-big text-center icon-warning">
+                  <i class="nc-icon nc-money-coins text-success"></i>
+                </div>
+              </div>
+              <div class="col-7 col-md-8">
+                <div class="numbers">
+                  <p class="card-category">Revenue</p>
+                  <p class="card-title">$ 1,345
+                    <p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer ">
+            <hr>
+            <div class="stats">
+              <i class="fa fa-calendar-o"></i> Last day
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-5 col-md-4">
+                <div class="icon-big text-center icon-warning">
+                  <i class="nc-icon nc-vector text-danger"></i>
+                </div>
+              </div>
+              <div class="col-7 col-md-8">
+                <div class="numbers">
+                  <p class="card-category">Errors</p>
+                  <p class="card-title">23
+                    <p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer ">
+            <hr>
+            <div class="stats">
+              <i class="fa fa-clock-o"></i> In the last hour
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-5 col-md-4">
+                <div class="icon-big text-center icon-warning">
+                  <i class="nc-icon nc-favourite-28 text-primary"></i>
+                </div>
+              </div>
+              <div class="col-7 col-md-8">
+                <div class="numbers">
+                  <p class="card-category">Followers</p>
+                  <p class="card-title">+45K
+                    <p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer ">
+            <hr>
+            <div class="stats">
+              <i class="fa fa-refresh"></i> Update now
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- </div>
+    <div class="row  d-flex justify-content-center">
+      <div class="col-md-8 col-sm-3">
+
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search Here" [(ngModel)]="rapport">
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">nom</th>
+              <th scope="col">matricule</th>
+              <th scope="col">theme</th>
+              <th scope="col">image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of filteredProducts | filter:rapport">
+              <td>{{item.nom}}</td>
+              <td>{{item.matricule}}</td>
+              <td>{{item.theme}}</td>
+              <td><img class="imgsize" src="./../../../assets/images/pdfl.jpg" alt="images non" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div> -->
+
+      <!-- <div class="panel panel-primary" *ngFor="let item of filteredProducts">
+
+    <div class="panel-heading">
+      <h3 class="panel-title"></h3>
+    </div>
+    <div class="panel-body">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-xs-4">
+            <img [src]="item.image" alt="ok" class="imageclass">
+          </div>
+          <div class="col-xs-4">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 p-3 shadow-lg " *ngFor="let item of memoiresS | async">
+      <div class="card">
+        <img class="propImg" src={{item.payload.doc.data().image}} alt="Card image cap">
+        <div class="card-body p-2">
+          <h5 class="card-title">{{item.payload.doc.data().nom}}</h5>
+          <p class="card-text">{{item.payload.doc.data().prenom}}</p>
+          <p class="card-text">{{item.payload.doc.data().theme}}</p>
+          <a [routerLink]="['/affichage',item.payload.doc.id]"> Lire </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="col-md-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Prenom</th>
+          <th>Matricule</th>
+          <th>Cycle</th>
+          <th>Mention</th>
+          <th>Parcours</th>
+          <th>Annee</th>
+          <th>Theme</th>
+          <th>Entreprise</th>
+          <th>hokki</th>
+          <th>hokki</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of memoiresS | async">
+          <td>
+            <h2>{{ item.nom }}</h2>
+          </td>
+          <th>{{ item.prenom }}</th>
+          <td>{{ item.matricule }}</td>
+          <td>{{ item.cycle }}</td>
+          <td>{{ item.mention }}</td>
+          <td>{{ item.parcours }}</td>
+          <td>{{ item.annee }}</td>
+          <td>{{ item.theme }}</td>
+          <td>{{ item.entreprise }}</td>
+          <td><a [routerLink]=""><button class="btn btn-primary">Editer</button></a></td>
+          <td>hokki</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</div>
+

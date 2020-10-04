@@ -1,0 +1,121 @@
+<div class="container">
+  <div class="row">
+    <div *ngIf="currentFileUpload" class="progress">
+      <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+        attr.aria-valuenow="{{percentage}}" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:percentage+'%'}">
+        {{percentage}}%</div>
+    </div>
+
+    <label class="btn btn-default"> <input type="file" (change)="selectFile($event)">
+    </label>
+
+    <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+  </div>
+  <div class="row">
+    <form (ngSubmit)="addm(memoireForm.value)" [formGroup]="memoireForm">
+      <div class="form-group">
+        <label for="matricule">Matricule</label>
+        <input type="text" class="form-control" name="matricule" formControlName="matricule">
+      </div>
+      <div class="form-group">
+        <label for="Nom">Nom</label>
+        <input type="text" class="form-control" name="nom" formControlName="nom">
+      </div>
+      <div class="form-group">
+        <label for="Prenom">Prenom</label>
+        <input type="text" class="form-control" name="prenom" formControlName="prenom">
+      </div>
+
+      <div class="form-group">
+        <label for="Prenom">Prenom</label>
+        <input type="file" id="url" name="url" (change)="handleInput($event)" formControlName="url">
+      </div>
+
+      <input type="submit" value="Save" [disabled]="!memoireForm.valid">
+
+    </form>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-lg-4 pb-3">
+      <div class="card card-custom bg-white border-white border-0" style="height: 450px">
+        <div class="card-custom-img"
+          style="background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg);">
+        </div>
+        <div class="card-custom-avatar">
+          <img class="img-fluid"
+            src="http://res.cloudinary.com/d3/image/upload/c_pad,g_center,h_200,q_auto:eco,w_200/bootstrap-logo_u3c8dx.jpg"
+            alt="Avatar" />
+        </div>
+        <div class="card-body" style="overflow-y: auto">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">You can also setead a scrollbar in
+            the card body will appear.</p>
+          <p class="card-text">Some example text to show the scrollbar.</p>
+          <p class="card-text">Lorem illud
+            luptatum no qui. .</p>
+        </div>
+        <div class="card-footer" style="background: inherit; border-color: inherit;">
+          <a href="#" class="btn btn-primary">Option</a>
+          <a href="#" class="btn btn-outline-primary">Other option</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4 pb-3">
+      <div class="card card-custom bg-white border-white border-0" style="height: 450px">
+        <div class="card-custom-img"
+          style="background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg);">
+        </div>
+        <div class="card-custom-avatar">
+          <img class="img-fluid"
+            src="http://res.cloudinary.com/d3/image/upload/c_pad,g_center,h_200,q_auto:eco,w_200/bootstrap-logo_u3c8dx.jpg"
+            alt="Avatar" />
+        </div>
+        <div class="card-body" style="overflow-y: auto">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">You can also setead a scrollbar in
+            the card body will appear.</p>
+          <p class="card-text">Some example text to show the scrollbar.</p>
+          <p class="card-text">Lorem illud
+            luptatum no qui. .</p>
+        </div>
+        <div class="card-footer" style="background: inherit; border-color: inherit;">
+          <a href="#" class="btn btn-primary">Option</a>
+          <a href="#" class="btn btn-outline-primary">Other option</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4 pb-3">
+      <div class="card-header" style="background: orange; border-color: inherit;">
+        <h1>MIP</h1>
+      </div>
+      <div class="card card-custom bg-white border-white border-0" style="height: 450px">
+        <div class="card-custom-img"
+          style="background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg);">
+        </div>
+        <div class="card-custom-avatar">
+          <img class="img-fluid"
+            src="./../../../../assets/images/pdflo.png"
+            alt="Avatar" />
+        </div>
+
+        <div class="card-body" style="overflow-y: auto">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">You can also setead a scrollbar in
+            the card body will appear.</p>
+          <p class="card-text">Some example text to show the scrollbar.</p>
+          <p class="card-text">Lorem illud
+            luptatum no qui. .</p>
+            <p class="card-text">You can also setead a scrollbar in
+              the card body will appear.</p>
+            <p class="card-text">Some example text to show the scrollbar.</p>
+            <p class="card-text">Lorem illud
+              luptatum no qui. .</p>
+        </div>
+        <div class="card-footer" style="background: orange; border-color: inherit;">
+          <a href="#" class="btn btn-primary">Option</a>
+          <a href="#" class="btn btn-outline-primary">Other option</a>
+        </div>
+      </div>
+    </div>
+  </div>

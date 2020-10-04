@@ -1,0 +1,44 @@
+
+<!-- <div class="card">
+  <div class="card-body">
+      <h5 class="card-title">Ingenierie</h5>
+      <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'iaa'" routerLinkActive="active"> IAA </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'mip'" routerLinkActive="active"> MIP </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="'cige'" routerLinkActive="active"> CIGE </a>
+          </li>
+        </ul>
+      <p class="card-text">
+        <router-outlet></router-outlet>
+      </p>
+  </div>
+</div> -->
+
+<div class="card">
+  <div class="card-body">
+    <h2 class="card-title">Ingenierie</h2>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'iaa'" routerLinkActive="active"> IAA </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'mip'" routerLinkActive="active"> MIP </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'cige'" routerLinkActive="active"> CIGE </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'newmemoire'" routerLinkActive="active"><button class="btn btn-dark">Ajouter un nouveau memoire </button></a>
+      </li>
+    </ul>
+
+    <p class="card-text">
+      <router-outlet></router-outlet>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+.table{
+  table-layout: auto;
+  width: 100%;
+}
+th,td {
+  border: 1px solid black;
+}
+
+tr{
+  /* width: 100px; */
+}
+
+/* .tab{
+  width: 100px;
+} */

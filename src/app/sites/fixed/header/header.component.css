@@ -1,0 +1,37 @@
+.spacer{
+  flex: 1 1 auto ;
+}
+
+/* top bar header */
+
+.top-bar{
+background: #eb7e25;
+height: 1.8rem;
+padding: .5rem 0;
+}
+
+.top-bar a {
+color: white;
+text-decoration: none;
+font-size: 1.1 rem ;
+}
+
+.navbar-brand img {
+height: 3rem;
+}
+.navbar{
+font-size: 1.15rem ;
+font-weight: 600;
+letter-spacing: .1rem;
+box-shadow: 0 .5rem .5rem rgba(0,0,0, .5) ;
+z-index:1 ;
+
+}
+
+.nav-item{
+padding: .5rem;
+}
+
+.nav-link.active , nav-link:hover {
+color: #eb7e25!important;
+}

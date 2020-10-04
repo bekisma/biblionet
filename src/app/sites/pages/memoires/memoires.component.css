@@ -1,0 +1,58 @@
+
+body{
+  background: #c48686;
+}
+table {
+  width: 100%;
+}
+
+.mat-tab-group {
+  margin-bottom: 48px;
+}
+
+.row{
+  margin: 20px;
+}
+.btn{
+  margin: 2px;
+  border-color: #eb7e25;
+  color: black!important;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+.card-header{
+  background-color: #eb7e25;
+}
+
+.h6{
+  color: #eb7e25;
+}
+
+.title{
+  color: aliceblue;
+  font-family: Harrington,Times New Roman, Times, serif;
+  text-align: center;
+}
+.titles{
+  color: #eb7e25;
+  font-family: Harrington,Times New Roman, Times, serif;
+  text-align: center;
+}
+/* .button {
+
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+} */
+.dowdi{
+  box-shadow: 0 .5rem .5rem rgba(0,0,0, .5) ;
+z-index:1 ;
+padding: 5px;
+}

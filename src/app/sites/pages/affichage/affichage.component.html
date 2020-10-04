@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row shadow">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img src="./../../../assets/images/pdfl.png" alt="" class="card-img-top">
+        </div>
+        <div class="card-body">
+        </div>
+        <div class="card-footer">
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8"  *ngIf="currentMemory; ">
+      <div class="card">
+        <!-- <img class="propImg imgsize" src={{currentMemory.image}} alt="Card image cap"> -->
+        <div class="card-body p-2">
+          <h5 class="card-title">{{currentMemory.nom}}</h5>
+          <p class="card-text">{{currentMemory.matricule}}</p>
+          <p class="card-text">{{currentMemory.entreprise}}</p>
+          <p class="card-text">{{currentMemory.encadreur}}</p>
+          <p class="card-text">{{currentMemory.theme}}</p>
+          <p class="card-text">{{currentMemory.cycle}}</p>
+          <p class="card-text">{{currentMemory.parcours}}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="row shadow">
+    <div class="col-sm-12 pdf" *ngIf="currentMemory; ">
+      <!-- <img src="./../../../assets/images/pdfl.jpg" alt="" class="card-img-top"> -->
+      <pdf-viewer
+        src="{{currentMemory.url}}"
+        [render-text]="false"
+        [show-all]="true"
+        style="display: block;">
+    </pdf-viewer>
+      <!-- <pdf-viewer src={{currentMemory.url}} [render-text]="true" [show-all]="true"></pdf-viewer> -->
+    </div>
+
+    <!-- <div class="pdf-container">
+    <pdf-viewer [src]="src"
+                [original-size]="false"
+    ></pdf-viewer>
+  </div> -->
+  </div>
+</div>

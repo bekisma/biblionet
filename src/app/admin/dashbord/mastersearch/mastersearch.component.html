@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-body">
+    <h2 class="card-title">Master Recherche</h2>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'cie'" routerLinkActive="active"> CIE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'ieai'" routerLinkActive="active"> IEAI </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'gp'" routerLinkActive="active"> GP </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'san'" routerLinkActive="active"> SAN </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'newmemoire'" routerLinkActive="active"><button class="btn btn-dark">Ajouter un nouveau memoire </button></a>
+      </li>
+    </ul>
+
+    <p class="card-text">
+      <router-outlet></router-outlet>
+    </p>
+  </div>
+</div>
